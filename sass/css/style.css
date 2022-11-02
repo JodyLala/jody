@@ -1,0 +1,117 @@
+@charset "UTF-8";
+/*  $li... permet e récupérer un nombre infini d'argument qui seront rangé dans cette variable*/
+footer ul {
+  /*
+  @warn "ATTENTION !" -> @warn affiche un warning dans le terminal (en jaune);
+  @error " Ne faites pas ça..." -> @error provoque une erreur arrêtant la compilatio du scss.;
+  */
+  /*
+  @warn "ATTENTION !" -> @warn affiche un warning dans le terminal (en jaune);
+  @error " Ne faites pas ça..." -> @error provoque une erreur arrêtant la compilatio du scss.;
+  */
+  /*
+  @warn "ATTENTION !" -> @warn affiche un warning dans le terminal (en jaune);
+  @error " Ne faites pas ça..." -> @error provoque une erreur arrêtant la compilatio du scss.;
+  */
+  /*
+  @warn "ATTENTION !" -> @warn affiche un warning dans le terminal (en jaune);
+  @error " Ne faites pas ça..." -> @error provoque une erreur arrêtant la compilatio du scss.;
+  */
+  /*
+  @warn "ATTENTION !" -> @warn affiche un warning dans le terminal (en jaune);
+  @error " Ne faites pas ça..." -> @error provoque une erreur arrêtant la compilatio du scss.;
+  */
+}
+footer ul truc1 {
+  font-size: 30px;
+}
+footer ul truc2 {
+  font-size: 40px;
+}
+footer ul truc3 {
+  font-size: 50px;
+}
+footer ul truc4 {
+  font-size: 60px;
+}
+footer ul truc5 {
+  font-size: 70px;
+}
+
+/* @use doit être écrit avant toute autre règles. Il permet d'importer un fichier "partial" (qui comment avec "_". Les fichiers partials ne sont pas compilé sauf si importé. */
+h1 {
+  color: red;
+}
+
+h2 {
+  color: blue;
+}
+
+h3 {
+  color: green;
+}
+
+/* Le nesting permet d'inclure des selecteurs dans un autre selecteur permettant ainsi de ranger les enfants dans leurs parents sans avoir à répéter leurs noms.*/
+footer {
+  background-color: yellow;
+}
+footer .copy {
+  background-color: purple;
+}
+footer:hover {
+  background-color: orange;
+}
+
+/* Les variables scss ont une syntaxe un peu plus simple et n'apaparaissent pas dans les compilations */
+.truc5, header {
+  background-color: violet;
+}
+
+/* Extends permet de reprendre un morceau de css et de le réutiliser à plusieurs endroits */
+main ul, header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main ul {
+  flex-direction: column;
+}
+
+.copy {
+  font-size: 4rem;
+  background-color: aquamarine;
+  position: absolute;
+  top: 90%;
+  left: 90%;
+  transform: translate(-50%, -50%);
+}
+
+.menu {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Une fonction scss permet de donner une valeur en entrée pour en récupérer une différente en sortie. Par exemple ici on a une fonction qui retourne une coueleur complémentaire et éclairci de la couleur donnée en argument*/
+.copy {
+  color: brown;
+  background-color: compLight(brown);
+}
+
+.copy {
+  width: 8rem;
+  height: 8rem;
+  /* @if permet d'indiquer des propriétés qui ne sernt activé qu'a certaines conditions, ici seulement si $w et $h sont égaux */
+  border-radius: 5px;
+}
+
+.menu {
+  width: 300px;
+  height: 200px;
+  /* @if permet d'indiquer des propriétés qui ne sernt activé qu'a certaines conditions, ici seulement si $w et $h sont égaux */
+  border-radius: 5px;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,62 @@
+@charset "UTF-8";
+h1 {
+  color: red;
+}
+
+h2 {
+  color: blue;
+}
+
+h3 {
+  color: green;
+}
+
+/* Le nesting permet d'inclure des selecteurs dans un autre selecteur permettant ainsi de ranger les enfants dans leurs parents sans avoir à répéter leurs noms.*/
+footer {
+  background-color: yellow;
+}
+footer .copy {
+  background-color: purple;
+}
+footer:hover {
+  background-color: orange;
+}
+
+/* Les variables scss ont une syntaxe un peu plus simple et n'apaparaissent pas dans les compilations */
+.truc5, header {
+  background-color: violet;
+}
+
+/* Extends permet de reprendre un morceau de css et de le réutiliser à plusieurs endroits */
+main ul, header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main ul {
+  flex-direction: column;
+}
+
+.copy {
+  font-size: 4rem;
+  background-color: aquamarine;
+  position: absolute;
+  top: 90%;
+  left: 90%;
+  transform: translate(-50%, -50%);
+}
+
+.menu {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.copy {
+  color: brown;
+  background-color: compLight(brown);
+}
+
+/*# sourceMappingURL=style.css.map */
